@@ -3,7 +3,8 @@ contract SimpleBank {
     mapping (address => uint) private balances;
     mapping (address => bool) public enrolled;
 
-    address payable public owner;
+    //address payable public owner;
+    address public owner;
     
     event LogEnrolled(address indexed accountAddress); 
     event LogDepositMade(address indexed accountAddress, uint amount);
@@ -36,7 +37,7 @@ contract SimpleBank {
         return(balances[msg.sender]);
     }   
 
-    function() external payable {
+    function() external {
         revert();
     }   
 }
