@@ -23,6 +23,7 @@ contract SimpleBank {
     }
 
     function deposit() public payable returns (uint) {
+        require(enrolled[msg.sender], "msg.sender not enrolled - can't deposit");
         balances[msg.sender] += msg.value;
         emit LogDepositMade(msg.sender, msg.value);
         return(balances[msg.sender]);  
