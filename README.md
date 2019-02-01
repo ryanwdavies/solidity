@@ -2,7 +2,7 @@
 
 Notes, tests and exercises relating to Solidity.
 
-
+ 
 ````
 
                   o<   o     o     o     o
